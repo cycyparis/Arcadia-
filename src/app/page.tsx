@@ -124,7 +124,7 @@ export default function Home() {
 
           {/* Address */}
           <p className="text-sm tracking-[0.15em] text-white/90 uppercase md:text-base">
-            148 Rue du Temple, Paris 3
+            30 Rue Gosselet, 59000 Lille
           </p>
 
           {/* CTA Buttons */}
