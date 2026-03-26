@@ -119,7 +119,7 @@ export default function Home() {
 
           {/* Subtitle with ornament lines */}
           <div className="ornament-line text-xs tracking-[0.3em] text-white/80 uppercase md:text-sm">
-            Le Marais Paris
+            Frais • Saisonnier • Authentique
           </div>
 
           {/* Address */}
