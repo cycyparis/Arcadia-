@@ -138,19 +138,12 @@ export default function Home() {
               <span className="corner-br" />
               Réserver
             </a>
-            <a href="#buffets" className="btn-deco">
+            <a href="#menu" className="btn-deco">
               <span className="corner-tl" />
               <span className="corner-tr" />
               <span className="corner-bl" />
               <span className="corner-br" />
-              Plan des Buffets
-            </a>
-            <a href="#groupe" className="btn-deco">
-              <span className="corner-tl" />
-              <span className="corner-tr" />
-              <span className="corner-bl" />
-              <span className="corner-br" />
-              Groupe
+              Menu
             </a>
           </div>
         </div>
