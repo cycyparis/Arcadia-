@@ -28,7 +28,7 @@ export default function SideMenu() {
 
       {/* Side panel */}
       <nav
-        className={`fixed top-0 left-0 z-50 flex h-full w-[340px] flex-col justify-between bg-white px-10 py-10 transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 z-50 flex h-full w-[340px] flex-col justify-between bg-arcadia-cream px-10 py-10 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
