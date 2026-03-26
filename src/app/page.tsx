@@ -1,3 +1,5 @@
+import SideMenu from "@/components/SideMenu";
+
 export default function Home() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -26,15 +28,8 @@ export default function Home() {
       <div className="relative z-10 flex h-full flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
         {/* Top bar */}
         <header className="flex w-full items-center justify-between">
-          {/* Hamburger menu */}
-          <button
-            className="flex flex-col gap-[5px] p-2"
-            aria-label="Menu"
-          >
-            <span className="block h-[2px] w-7 bg-white" />
-            <span className="block h-[2px] w-7 bg-white" />
-            <span className="block h-[2px] w-7 bg-white" />
-          </button>
+          {/* Side menu */}
+          <SideMenu />
 
           {/* Social links */}
           <nav className="flex items-center gap-4">
