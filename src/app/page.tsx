@@ -11,19 +11,19 @@ export default function Home() {
           className="relative w-1/2 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-left.jpg')" }}
         >
-          <div className="absolute inset-0 bg-arcadia-brown/25" />
+          <div className="absolute inset-0 bg-arcadia-brown/40" />
         </div>
         {/* Right image */}
         <div
           className="relative w-1/2 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-right.jpg')" }}
         >
-          <div className="absolute inset-0 bg-arcadia-brown/25" />
+          <div className="absolute inset-0 bg-arcadia-brown/40" />
         </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12">
+      <div className="relative z-10 flex h-full flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
         {/* Top bar */}
         <header className="flex w-full items-center justify-between">
           {/* Hamburger menu */}
@@ -115,7 +115,7 @@ export default function Home() {
             <img
               src="/logo-arcadia.png"
               alt="Arcadia"
-              className="w-80 md:w-[28rem] lg:w-[36rem]"
+              className="w-80 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] md:w-[28rem] lg:w-[36rem]"
             />
           </div>
 
