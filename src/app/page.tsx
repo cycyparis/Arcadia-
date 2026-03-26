@@ -52,7 +52,9 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/arcadia.lille/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-white/80 transition-colors hover:text-white"
             >
