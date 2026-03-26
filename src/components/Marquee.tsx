@@ -6,11 +6,12 @@ export default function Marquee() {
     "Arcadia",
   ];
 
-  // Repeat enough times to fill the scroll seamlessly
+  // Plusieurs copies pour un loop vraiment "sans couture"
+  // (on retombe sur des segments identiques au moment du restart).
   const repeated = [...Array(8)].flatMap(() => items);
 
   return (
-    <section className="relative overflow-hidden bg-[#E0C097]">
+    <section className="marquee relative overflow-hidden bg-[#E0C097]">
       {/* Top rule */}
       <div className="h-px w-full bg-arcadia-brown/20" />
 

@@ -1,5 +1,6 @@
 import SideMenu from "@/components/SideMenu";
 import Marquee from "@/components/Marquee";
+import OrnamentDiamond from "@/components/OrnamentDiamond";
 
 export default function Home() {
   return (
@@ -70,8 +71,12 @@ export default function Home() {
                 className="w-52 drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] sm:w-72 md:w-[28rem] lg:w-[36rem]"
               />
             </div>
-            <div className="ornament-line text-[0.65rem] font-semibold tracking-[0.25em] text-white uppercase sm:text-xs sm:tracking-[0.3em] md:text-sm">
-              Frais • Saisonnier • Authentique
+            <div className="flex items-center gap-6 text-[0.65rem] font-semibold tracking-[0.25em] text-white uppercase sm:text-xs sm:tracking-[0.3em] md:text-sm">
+              <span>Frais</span>
+              <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
+              <span>Saisonnier</span>
+              <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
+              <span>Authentique</span>
             </div>
             <p className="text-xs font-semibold tracking-[0.12em] text-white uppercase sm:text-sm sm:tracking-[0.15em] md:text-base">
               30 Rue Gosselet, 59000 Lille
@@ -111,32 +116,37 @@ export default function Home() {
               Restaurant · Lille
             </p>
 
-            <h2 className="text-3xl font-light tracking-[0.15em] text-white uppercase md:text-4xl lg:text-5xl">
-              Arcadia
-            </h2>
+            <img
+              src="/logo-arcadia.png"
+              alt="Arcadia"
+              className="w-56 md:w-64 brightness-0 invert opacity-90"
+            />
 
             {/* Art-deco rule */}
-            <div className="mt-4 flex items-center gap-3">
+            <div className="mt-4 flex items-center gap-3 text-arcadia-gold/60">
+              <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
               <div className="h-px w-6 bg-arcadia-gold/40" />
               <div className="h-px w-12 bg-arcadia-gold" />
               <div className="h-px w-6 bg-arcadia-gold/40" />
+              <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
             </div>
 
-            <p className="mt-8 max-w-lg text-base leading-relaxed text-white/75 md:text-lg">
+            <p className="mt-8 max-w-lg typography-body text-white/75">
               Au cœur de Lille, nous avons créé un lieu où la cuisine est une
               célébration. Des produits frais, de saison, travaillés avec
               authenticité pour inspirer chacun de nos convives à savourer
               chaque instant autour de notre table.
             </p>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-white/75 md:text-lg">
+            <p className="mt-4 max-w-lg typography-body text-white/75">
               Arcadia, c&apos;est l&apos;envie de partager, d&apos;explorer les saveurs et de
               créer des moments uniques dans un cadre chaleureux et raffiné.
             </p>
 
             {/* Hours line */}
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-10 flex items-center gap-4 text-arcadia-gold/60">
               <div className="h-px w-8 bg-arcadia-gold/50" />
-
+              <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
+              <div className="h-px w-8 bg-arcadia-gold/50" />
             </div>
           </div>
 
@@ -157,19 +167,243 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* ===== MENU SECTION ===== */}
+      <section id="menu" className="bg-arcadia-brown">
+        {/* Compat : certains liens pointent encore vers #reserver */}
+        <div id="reserver" className="sr-only" aria-hidden="true" />
+
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 py-10 md:gap-16 md:px-16 md:py-16">
+          {/* Left: Menu */}
+          <div className="flex-1 w-full order-2">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+              <div>
+                <p className="mb-5 text-[0.7rem] font-semibold tracking-[0.35em] text-arcadia-gold uppercase">
+                  Entrées
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Velouté de légumes rôtis
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        7€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Selon saison et arrivée
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Chou-fleur rôti
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        6€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Sauce miso soja et tahini, sumac
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Salade de betteraves, chou rouge et lentilles vertes
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        6,50€
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <p className="mb-5 text-[0.7rem] font-semibold tracking-[0.35em] text-arcadia-gold uppercase">
+                    Desserts
+                  </p>
+
+                  <div className="space-y-6">
+                    <div>
+                      <div className="flex items-start justify-between gap-6">
+                        <p className="font-semibold text-white/90">
+                          Pavlova aux agrumes
+                        </p>
+                        <span className="shrink-0 font-semibold text-white/90">
+                          5,50€
+                        </span>
+                      </div>
+                      <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                        Clémentine, pamplemousse, suprême d&apos;orange, chantilly maison
+                      </p>
+                    </div>
+
+                    <div>
+                      <div className="flex items-start justify-between gap-6">
+                        <p className="font-semibold text-white/90">
+                          Croumble aux pommes
+                        </p>
+                        <span className="shrink-0 font-semibold text-white/90">
+                          5,50€
+                        </span>
+                      </div>
+                      <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                        Épices
+                      </p>
+                    </div>
+
+                    <div>
+                      <div className="flex items-start justify-between gap-6">
+                        <p className="font-semibold text-white/90">
+                          Mousse au chocolat Barry 64%
+                        </p>
+                        <span className="shrink-0 font-semibold text-white/90">
+                          7€
+                        </span>
+                      </div>
+                      <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                        Noisettes torrfiées, fleur de sel
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <p className="mb-5 text-[0.7rem] font-semibold tracking-[0.35em] text-arcadia-gold uppercase">
+                  Plats
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">Poutine</p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        15€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Frites maison, jus vegan, fromage (Maroilles, Tome)
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Blanquette de dinde
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        14€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Carotte, poireaux, oignons, riz Basmati
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Fromage chaud du Jura - 200g
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        17€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Pdt grenailles au four, herbes
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Poisson blanc - selon pêche
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        19€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Chapelure aux herbes, noisettes, pot grenailles, chantilly salée
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="font-semibold text-white/90">
+                        Magret de canard - 240g
+                      </p>
+                      <span className="shrink-0 font-semibold text-white/90">
+                        19€
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm italic leading-relaxed text-white/60">
+                      Endives braisées, purée de céleri rave et de pdt, sauce soja et miel
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <p className="mb-3 text-[0.7rem] font-semibold tracking-[0.35em] text-white/70 uppercase">
+                    Pour les enfants !
+                  </p>
+                  <p className="typography-body text-white/70">
+                    Tous nos plats sont disponibles en portion réduites
+                  </p>
+
+                  <div className="mt-5 flex items-center justify-start gap-8 text-white/60">
+                    <div className="flex items-center gap-2">
+                      <span className="inline-block h-3 w-3 rounded-full bg-emerald-400/80" aria-hidden="true" />
+                      <span className="text-sm">Plat Végétarien</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="inline-block h-3 w-3 rounded-full bg-emerald-400/80" aria-hidden="true" />
+                      <span className="text-sm">Plat Vegan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Title */}
+          <div className="w-full order-1 md:max-w-[340px]">
+            <div className="flex flex-col items-center gap-5">
+              <img
+                src="/menu.png"
+                alt="Menu"
+                className="w-[240px] md:w-[260px] brightness-0 invert opacity-90"
+              />
+
+              <div className="flex items-center gap-3 text-arcadia-gold/70">
+                <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
+                <div className="h-px w-12 bg-arcadia-gold/40" />
+                <OrnamentDiamond className="h-2 w-2 text-arcadia-gold/80" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== FOOTER ===== */}
       <footer className="bg-arcadia-brown border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-12 md:px-16 md:py-20">
 
           {/* Top row */}
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:flex md:flex-row md:items-start md:justify-between">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:flex md:flex-row md:items-start md:justify-between md:gap-16">
 
             {/* Logo + tagline */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 md:self-center">
               <img
                 src="/logo-arcadia.png"
                 alt="Arcadia"
-                className="w-36 brightness-0 invert opacity-80"
+                className="w-44 md:w-48 brightness-0 invert opacity-80"
               />
 
             </div>
@@ -223,7 +457,7 @@ export default function Home() {
             </div>
 
             {/* Address + hours */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 md:ml-0">
               <p className="mb-1 text-[0.6rem] font-semibold tracking-[0.35em] text-arcadia-gold uppercase">
                 Adresse
               </p>

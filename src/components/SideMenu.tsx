@@ -57,7 +57,7 @@ export default function SideMenu() {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="group relative w-fit text-4xl font-extralight tracking-widest text-white/90 hover:text-arcadia-gold md:text-5xl"
+              className="group relative w-fit text-4xl font-normal text-white/90 hover:text-arcadia-gold md:text-5xl title-gravure"
               style={{
                 opacity: isOpen ? 1 : 0,
                 transform: isOpen ? "translateY(0)" : "translateY(20px)",
