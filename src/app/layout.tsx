@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Arcadia - Le Marais Paris",
-  description: "Arcadia - Restaurant & Buffets au coeur du Marais, Paris 3",
+  title: "Arcadia - Lille",
+  description: "Arcadia - Restaurant au coeur de Lille, 30 Rue Gosselet",
 };
 
 export default function RootLayout({

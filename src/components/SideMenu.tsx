@@ -28,7 +28,7 @@ export default function SideMenu() {
 
       {/* Side panel */}
       <nav
-        className={`fixed top-0 left-0 z-50 flex h-full w-[340px] flex-col justify-between bg-white px-10 py-10 transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 z-50 flex h-full w-[340px] flex-col justify-between bg-arcadia-cream px-10 py-10 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -60,14 +60,14 @@ export default function SideMenu() {
           <div className="mt-8 flex flex-col gap-4">
             <a
               href="#reserver"
-              className="text-[0.95rem] font-medium tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
+              className="text-[0.95rem] font-bold tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
               onClick={() => setIsOpen(false)}
             >
               Réserver
             </a>
             <a
               href="#menu"
-              className="text-[0.95rem] font-medium tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
+              className="text-[0.95rem] font-bold tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
               onClick={() => setIsOpen(false)}
             >
               Menu
@@ -101,10 +101,10 @@ export default function SideMenu() {
               Instagram
             </a>
             <a
-              href="#"
+              href="mailto:contact@arcadia-lille.com"
               className="text-[0.8rem] tracking-[0.05em] text-arcadia-brown/50 transition-colors hover:text-arcadia-brown"
             >
-              LinkedIn
+              contact@arcadia-lille.com
             </a>
           </div>
         </div>
