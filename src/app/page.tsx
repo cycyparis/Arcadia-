@@ -11,14 +11,14 @@ export default function Home() {
           className="relative w-1/2 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-left.jpg')" }}
         >
-          <div className="absolute inset-0 bg-arcadia-brown/40" />
+          <div className="absolute inset-0 bg-arcadia-brown/25" />
         </div>
         {/* Right image */}
         <div
           className="relative w-1/2 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-right.jpg')" }}
         >
-          <div className="absolute inset-0 bg-arcadia-brown/40" />
+          <div className="absolute inset-0 bg-arcadia-brown/25" />
         </div>
       </div>
 
@@ -120,12 +120,12 @@ export default function Home() {
           </div>
 
           {/* Subtitle with ornament lines */}
-          <div className="ornament-line text-xs tracking-[0.3em] text-white/80 uppercase md:text-sm">
+          <div className="ornament-line text-xs font-semibold tracking-[0.3em] text-white/80 uppercase md:text-sm">
             Frais • Saisonnier • Authentique
           </div>
 
           {/* Address */}
-          <p className="text-sm tracking-[0.15em] text-white/90 uppercase md:text-base">
+          <p className="text-sm font-semibold tracking-[0.15em] text-white/90 uppercase md:text-base">
             30 Rue Gosselet, 59000 Lille
           </p>
 
