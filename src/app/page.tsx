@@ -82,39 +82,12 @@ export default function Home() {
 
         {/* Center content */}
         <div className="flex flex-1 flex-col items-center justify-center gap-8 text-center">
-          {/* Decorative art-deco logo ornament */}
-          <div className="flex items-center gap-3">
-            <svg
-              className="h-8 w-12 text-white/70 md:h-10 md:w-16"
-              viewBox="0 0 64 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M0 20 L16 8 L32 20 L16 32 Z" />
-              <path d="M12 20 L32 4 L52 20" />
-              <path d="M20 20 L32 12 L44 20" />
-            </svg>
-            <svg
-              className="h-8 w-12 -scale-x-100 text-white/70 md:h-10 md:w-16"
-              viewBox="0 0 64 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M0 20 L16 8 L32 20 L16 32 Z" />
-              <path d="M12 20 L32 4 L52 20" />
-              <path d="M20 20 L32 12 L44 20" />
-            </svg>
-          </div>
-
-          {/* Main title */}
-          <h1
-            className="text-5xl leading-tight tracking-wide text-white md:text-7xl lg:text-8xl"
-            style={{ fontFamily: "'Brush Script MT', 'Segoe Script', 'Dancing Script', cursive" }}
-          >
-            Arcadia
-          </h1>
+          {/* Logo */}
+          <img
+            src="/logo-arcadia.png"
+            alt="Arcadia"
+            className="w-64 md:w-80 lg:w-96"
+          />
 
           {/* Subtitle with ornament lines */}
           <div className="ornament-line text-xs tracking-[0.3em] text-white/80 uppercase md:text-sm">
