@@ -171,9 +171,7 @@ export default function Home() {
                 alt="Arcadia"
                 className="w-36 brightness-0 invert opacity-80"
               />
-              <p className="text-[0.65rem] font-semibold tracking-[0.35em] text-white/30 uppercase">
-                Restaurant · Lille
-              </p>
+
             </div>
 
             {/* Nav columns */}
