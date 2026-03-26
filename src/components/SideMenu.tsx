@@ -60,14 +60,14 @@ export default function SideMenu() {
           <div className="mt-8 flex flex-col gap-4">
             <a
               href="#reserver"
-              className="text-[0.95rem] font-medium tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
+              className="text-[0.95rem] font-bold tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
               onClick={() => setIsOpen(false)}
             >
               Réserver
             </a>
             <a
               href="#menu"
-              className="text-[0.95rem] font-medium tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
+              className="text-[0.95rem] font-bold tracking-[0.08em] text-arcadia-brown transition-colors hover:text-arcadia-gold"
               onClick={() => setIsOpen(false)}
             >
               Menu

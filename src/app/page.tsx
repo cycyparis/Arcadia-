@@ -70,11 +70,9 @@ export default function Home() {
                 className="w-80 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] md:w-[28rem] lg:w-[36rem]"
               />
             </div>
-            <div className="ornament-line font-serif text-sm font-light tracking-[0.3em] text-white/80 uppercase md:text-base">
-              Frais • Saisonnier • Authentique
+            <div className="ornament-line text-xs font-semibold tracking-[0.3em] text-white/80 uppercase md:text-sm">              Frais • Saisonnier • Authentique
             </div>
-            <p className="font-serif text-sm tracking-[0.15em] text-white/90 uppercase md:text-base">
-              30 Rue Gosselet, 59000 Lille
+            <p className="text-sm font-semibold tracking-[0.15em] text-white/90 uppercase md:text-base">              30 Rue Gosselet, 59000 Lille
             </p>
             <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
               <a href="#reserver" className="btn-deco">
@@ -105,8 +103,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-8 py-20 md:flex-row md:gap-16 md:px-16 md:py-28">
           {/* Left: text */}
           <div className="flex-1">
-            <h2 className="font-serif text-3xl font-light tracking-[0.15em] text-white uppercase md:text-4xl lg:text-5xl">
-              Arcadia
+          <h2 className="text-3xl font-light tracking-[0.15em] text-white uppercase md:text-4xl lg:text-5xl">              Arcadia
             </h2>
             <div className="mt-2 h-px w-16 bg-arcadia-gold" />
             <p className="mt-8 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">

@@ -13,7 +13,7 @@ export default function Marquee() {
     let position = 0;
 
     const animate = () => {
-      position -= 0.15;
+      position -= 0.5;      
       if (position <= -50) position = 0;
       el.style.transform = `translateX(${position}%)`;
       animationId = requestAnimationFrame(animate);
@@ -31,8 +31,7 @@ export default function Marquee() {
         {[...Array(4)].map((_, i) => (
           <span
             key={i}
-            className="inline-block px-4 font-serif text-2xl font-light tracking-[0.2em] text-arcadia-gold uppercase md:text-3xl"
-          >
+            className="inline-block px-4 text-2xl font-light tracking-[0.2em] text-arcadia-gold uppercase md:text-3xl"          >
             {text}
           </span>
         ))}
