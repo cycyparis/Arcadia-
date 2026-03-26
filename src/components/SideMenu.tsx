@@ -101,10 +101,10 @@ export default function SideMenu() {
               Instagram
             </a>
             <a
-              href="#"
+              href="mailto:contact@arcadia-lille.com"
               className="text-[0.8rem] tracking-[0.05em] text-arcadia-brown/50 transition-colors hover:text-arcadia-brown"
             >
-              LinkedIn
+              contact@arcadia-lille.com
             </a>
           </div>
         </div>
