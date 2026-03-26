@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Arcadia Script";
+  src: local("Brush Script MT"), local("Segoe Script"), local("Comic Sans MS");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --arcadia-brown: #3b2015;
+  --arcadia-brown-light: #5a3a2a;
+  --arcadia-cream: #f5e6d3;
+  --arcadia-gold: #c9a96e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-arcadia-brown: var(--arcadia-brown);
+  --color-arcadia-brown-light: var(--arcadia-brown-light);
+  --color-arcadia-cream: var(--arcadia-cream);
+  --color-arcadia-gold: var(--arcadia-gold);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Art-deco decorative button borders */
+.btn-deco {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  color: white;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-deco::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-deco::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: 12px;
+  right: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-deco:hover::before,
+.btn-deco:hover::after {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-deco:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Decorative corner accents for buttons */
+.btn-deco .corner-tl,
+.btn-deco .corner-tr,
+.btn-deco .corner-bl,
+.btn-deco .corner-br {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-deco .corner-tl {
+  top: -4px;
+  left: -4px;
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+
+.btn-deco .corner-tr {
+  top: -4px;
+  right: -4px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+}
+
+.btn-deco .corner-bl {
+  bottom: -4px;
+  left: -4px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.btn-deco .corner-br {
+  bottom: -4px;
+  right: -4px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+/* Art deco ornament */
+.ornament-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ornament-line::before,
+.ornament-line::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
 }
