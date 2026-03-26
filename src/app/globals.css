@@ -23,14 +23,15 @@
   --color-arcadia-brown-light: var(--arcadia-brown-light);
   --color-arcadia-cream: var(--arcadia-cream);
   --color-arcadia-gold: var(--arcadia-gold);
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: 'Raleway', Arial, Helvetica, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-mono: monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
 /* Art-deco decorative button borders */
@@ -41,8 +42,9 @@ body {
   justify-content: center;
   padding: 0.75rem 2rem;
   color: white;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: all 0.3s ease;
