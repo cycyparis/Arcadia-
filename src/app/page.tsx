@@ -81,38 +81,41 @@ export default function Home() {
         </header>
 
         {/* Center content */}
-        <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
-          {/* Decorative art-deco ornaments */}
-          <div className="flex items-center gap-4">
-            <svg
-              className="h-8 w-12 text-white/70 md:h-10 md:w-16"
-              viewBox="0 0 64 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M0 20 L16 8 L32 20 L16 32 Z" />
-              <path d="M12 20 L32 4 L52 20" />
-              <path d="M20 20 L32 12 L44 20" />
-            </svg>
-            <svg
-              className="h-8 w-12 -scale-x-100 text-white/70 md:h-10 md:w-16"
-              viewBox="0 0 64 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M0 20 L16 8 L32 20 L16 32 Z" />
-              <path d="M12 20 L32 4 L52 20" />
-              <path d="M20 20 L32 12 L44 20" />
-            </svg>
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+          {/* Ornaments + Logo grouped together */}
+          <div className="flex flex-col items-center">
+            {/* Decorative art-deco ornaments */}
+            <div className="mb-1 flex items-center gap-4">
+              <svg
+                className="h-8 w-12 text-white/70 md:h-10 md:w-16"
+                viewBox="0 0 64 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M0 20 L16 8 L32 20 L16 32 Z" />
+                <path d="M12 20 L32 4 L52 20" />
+                <path d="M20 20 L32 12 L44 20" />
+              </svg>
+              <svg
+                className="h-8 w-12 -scale-x-100 text-white/70 md:h-10 md:w-16"
+                viewBox="0 0 64 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M0 20 L16 8 L32 20 L16 32 Z" />
+                <path d="M12 20 L32 4 L52 20" />
+                <path d="M20 20 L32 12 L44 20" />
+              </svg>
+            </div>
+            {/* Logo */}
+            <img
+              src="/logo-arcadia.png"
+              alt="Arcadia"
+              className="w-80 md:w-[28rem] lg:w-[36rem]"
+            />
           </div>
-          {/* Logo */}
-          <img
-            src="/logo-arcadia.png"
-            alt="Arcadia"
-            className="-mt-3 w-80 md:w-[28rem] lg:w-[36rem]"
-          />
 
           {/* Subtitle with ornament lines */}
           <div className="ornament-line text-xs tracking-[0.3em] text-white/80 uppercase md:text-sm">
@@ -125,7 +128,7 @@ export default function Home() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-4 flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
             <a href="#reserver" className="btn-deco">
               <span className="corner-tl" />
               <span className="corner-tr" />
