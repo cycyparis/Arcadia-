@@ -10,7 +10,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --arcadia-brown: #3b2015;
+  --arcadia-brown: #2d1610;
   --arcadia-brown-light: #5a3a2a;
   --arcadia-cream: #f5e6d3;
   --arcadia-gold: #c9a96e;
@@ -42,6 +42,7 @@ body {
   padding: 0.75rem 2rem;
   color: white;
   font-size: 0.85rem;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: all 0.3s ease;

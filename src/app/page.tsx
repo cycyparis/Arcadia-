@@ -1,25 +1,29 @@
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative h-screen w-full overflow-hidden">
       {/* Dark brown border frame */}
       <div className="fixed inset-0 z-20 pointer-events-none border-[12px] border-arcadia-brown md:border-[20px]" />
 
-      {/* Background image placeholder with overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/hero-bg.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-arcadia-brown/60" />
+      {/* Split background images */}
+      <div className="absolute inset-0 flex">
+        {/* Left image */}
+        <div
+          className="relative w-1/2 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-left.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-arcadia-brown/25" />
+        </div>
+        {/* Right image */}
+        <div
+          className="relative w-1/2 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-right.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-arcadia-brown/25" />
+        </div>
       </div>
 
-      {/* Fallback gradient if no image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-arcadia-brown via-arcadia-brown-light to-arcadia-brown" />
-
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12">
+      <div className="relative z-10 flex h-full flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}>
         {/* Top bar */}
         <header className="flex w-full items-center justify-between">
           {/* Hamburger menu */}
@@ -48,7 +52,9 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/arcadia.lille/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-white/80 transition-colors hover:text-white"
             >
@@ -77,53 +83,54 @@ export default function Home() {
         </header>
 
         {/* Center content */}
-        <div className="flex flex-1 flex-col items-center justify-center gap-8 text-center">
-          {/* Decorative art-deco logo ornament */}
-          <div className="flex items-center gap-3">
-            <svg
-              className="h-8 w-12 text-white/70 md:h-10 md:w-16"
-              viewBox="0 0 64 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M0 20 L16 8 L32 20 L16 32 Z" />
-              <path d="M12 20 L32 4 L52 20" />
-              <path d="M20 20 L32 12 L44 20" />
-            </svg>
-            <svg
-              className="h-8 w-12 -scale-x-100 text-white/70 md:h-10 md:w-16"
-              viewBox="0 0 64 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M0 20 L16 8 L32 20 L16 32 Z" />
-              <path d="M12 20 L32 4 L52 20" />
-              <path d="M20 20 L32 12 L44 20" />
-            </svg>
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+          {/* Ornaments + Logo grouped together */}
+          <div className="flex flex-col items-center">
+            {/* Decorative art-deco ornaments */}
+            <div className="mb-1 flex items-center gap-4">
+              <svg
+                className="h-8 w-12 text-white/70 md:h-10 md:w-16"
+                viewBox="0 0 64 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M0 20 L16 8 L32 20 L16 32 Z" />
+                <path d="M12 20 L32 4 L52 20" />
+                <path d="M20 20 L32 12 L44 20" />
+              </svg>
+              <svg
+                className="h-8 w-12 -scale-x-100 text-white/70 md:h-10 md:w-16"
+                viewBox="0 0 64 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M0 20 L16 8 L32 20 L16 32 Z" />
+                <path d="M12 20 L32 4 L52 20" />
+                <path d="M20 20 L32 12 L44 20" />
+              </svg>
+            </div>
+            {/* Logo */}
+            <img
+              src="/logo-arcadia.png"
+              alt="Arcadia"
+              className="w-80 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] md:w-[28rem] lg:w-[36rem]"
+            />
           </div>
 
-          {/* Main title */}
-          <h1
-            className="text-5xl leading-tight tracking-wide text-white md:text-7xl lg:text-8xl"
-            style={{ fontFamily: "'Brush Script MT', 'Segoe Script', 'Dancing Script', cursive" }}
-          >
-            Arcadia
-          </h1>
-
           {/* Subtitle with ornament lines */}
-          <div className="ornament-line text-xs tracking-[0.3em] text-white/80 uppercase md:text-sm">
-            Le Marais Paris
+          <div className="ornament-line text-xs font-semibold tracking-[0.3em] text-white/80 uppercase md:text-sm">
+            Frais • Saisonnier • Authentique
           </div>
 
           {/* Address */}
-          <p className="text-sm tracking-[0.15em] text-white/90 uppercase md:text-base">
-            148 Rue du Temple, Paris 3
+          <p className="text-sm font-semibold tracking-[0.15em] text-white/90 uppercase md:text-base">
+            30 Rue Gosselet, 59000 Lille
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-4 flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
             <a href="#reserver" className="btn-deco">
               <span className="corner-tl" />
               <span className="corner-tr" />
@@ -131,19 +138,12 @@ export default function Home() {
               <span className="corner-br" />
               Réserver
             </a>
-            <a href="#buffets" className="btn-deco">
+            <a href="#menu" className="btn-deco">
               <span className="corner-tl" />
               <span className="corner-tr" />
               <span className="corner-bl" />
               <span className="corner-br" />
-              Plan des Buffets
-            </a>
-            <a href="#groupe" className="btn-deco">
-              <span className="corner-tl" />
-              <span className="corner-tr" />
-              <span className="corner-bl" />
-              <span className="corner-br" />
-              Groupe
+              Menu
             </a>
           </div>
         </div>
