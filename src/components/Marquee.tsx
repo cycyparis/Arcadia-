@@ -1,41 +1,47 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-
 export default function Marquee() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const items = [
+    "7/7 Midi et Soir",
+    "Brunch le Weekend",
+    "30 Rue Gosselet, Lille",
+    "Arcadia",
+  ];
 
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    let animationId: number;
-    let position = 0;
-
-    const animate = () => {
-      position -= 0.5;      
-      if (position <= -50) position = 0;
-      el.style.transform = `translateX(${position}%)`;
-      animationId = requestAnimationFrame(animate);
-    };
-
-    animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
-  }, []);
-
-  const text = "Arcadia • 7/7 Midi et Soir • Brunch le Weekend • 30 Rue Gosselet, Lille • ";
+  // Repeat enough times to fill the scroll seamlessly
+  const repeated = [...Array(8)].flatMap(() => items);
 
   return (
-    <section className="overflow-hidden bg-arcadia-cream py-8 md:py-10">
-      <div ref={scrollRef} className="flex whitespace-nowrap">
-        {[...Array(4)].map((_, i) => (
-          <span
-            key={i}
-            className="inline-block px-4 text-2xl font-light tracking-[0.2em] text-arcadia-gold uppercase md:text-3xl"          >
-            {text}
-          </span>
-        ))}
+    <section className="relative overflow-hidden bg-[#E0C097]">
+      {/* Top rule */}
+      <div className="h-px w-full bg-arcadia-brown/20" />
+
+      <div className="py-5 md:py-6">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {repeated.map((item, i) => (
+            <span key={i} className="inline-flex items-center">
+              <span className="px-6 text-[0.7rem] font-semibold tracking-[0.3em] text-arcadia-brown uppercase md:text-xs">
+                {item}
+              </span>
+              {/* Diamond separator */}
+              <svg
+                width="8"
+                height="8"
+                viewBox="0 0 8 8"
+                className="text-arcadia-brown/50 shrink-0"
+                fill="currentColor"
+              >
+                <polygon points="4,0 8,4 4,8 0,4" />
+              </svg>
+            </span>
+          ))}
+        </div>
       </div>
+
+      {/* Bottom rule */}
+      <div className="h-px w-full bg-arcadia-brown/20" />
+
+      {/* Left & right fade masks */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#E0C097] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#E0C097] to-transparent" />
     </section>
   );
 }
