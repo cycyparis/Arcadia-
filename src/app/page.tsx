@@ -4,19 +4,23 @@ export default function Home() {
       {/* Dark brown border frame */}
       <div className="fixed inset-0 z-20 pointer-events-none border-[12px] border-arcadia-brown md:border-[20px]" />
 
-      {/* Background image placeholder with overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/hero-bg.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-arcadia-brown/60" />
+      {/* Split background images */}
+      <div className="absolute inset-0 flex">
+        {/* Left image */}
+        <div
+          className="relative w-1/2 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-left.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-arcadia-brown/50" />
+        </div>
+        {/* Right image */}
+        <div
+          className="relative w-1/2 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-right.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-arcadia-brown/50" />
+        </div>
       </div>
-
-      {/* Fallback gradient if no image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-arcadia-brown via-arcadia-brown-light to-arcadia-brown" />
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12">
