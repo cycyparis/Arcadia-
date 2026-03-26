@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative h-screen w-full overflow-hidden">
       {/* Dark brown border frame */}
       <div className="fixed inset-0 z-20 pointer-events-none border-[12px] border-arcadia-brown md:border-[20px]" />
 
@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12">
+      <div className="relative z-10 flex h-full flex-col items-center justify-between px-6 py-8 md:px-12 md:py-12">
         {/* Top bar */}
         <header className="flex w-full items-center justify-between">
           {/* Hamburger menu */}
@@ -81,8 +81,8 @@ export default function Home() {
         </header>
 
         {/* Center content */}
-        <div className="flex flex-1 flex-col items-center justify-center gap-8 text-center">
-          {/* Decorative art-deco ornaments + Logo */}
+        <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
+          {/* Decorative art-deco ornaments */}
           <div className="flex items-center gap-4">
             <svg
               className="h-8 w-12 text-white/70 md:h-10 md:w-16"
@@ -107,10 +107,11 @@ export default function Home() {
               <path d="M20 20 L32 12 L44 20" />
             </svg>
           </div>
+          {/* Logo */}
           <img
             src="/logo-arcadia.png"
             alt="Arcadia"
-            className="w-80 md:w-[28rem] lg:w-[36rem]"
+            className="-mt-3 w-80 md:w-[28rem] lg:w-[36rem]"
           />
 
           {/* Subtitle with ornament lines */}
