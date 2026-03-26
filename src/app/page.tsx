@@ -11,14 +11,14 @@ export default function Home() {
           className="relative w-1/2 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-left.jpg')" }}
         >
-          <div className="absolute inset-0 bg-arcadia-brown/50" />
+          <div className="absolute inset-0 bg-arcadia-brown/25" />
         </div>
         {/* Right image */}
         <div
           className="relative w-1/2 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-right.jpg')" }}
         >
-          <div className="absolute inset-0 bg-arcadia-brown/50" />
+          <div className="absolute inset-0 bg-arcadia-brown/25" />
         </div>
       </div>
 
